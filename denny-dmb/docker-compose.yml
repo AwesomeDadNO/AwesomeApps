@@ -37,3 +37,5 @@ services:
     security_opt:
       - apparmor:unconfined
       - no-new-privileges
+    volumes:
+      - ${UMBREL_ROOT}/home/Videos:/mnt/videos
