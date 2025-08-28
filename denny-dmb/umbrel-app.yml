@@ -5,7 +5,7 @@ tagline: Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the u
 
 icon: https://github.com/I-am-PUID-0/DMB/assets/36779668/d0cbc785-2e09-41da-b226-924fdfcc1f21
 category: files & productivity
-version: "6.15.2"
+version: "6.15.3"
 port: 3005
 description: >-
   Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the unified deployment of the following projects/tools.
