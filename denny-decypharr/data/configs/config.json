@@ -11,7 +11,7 @@
     "download_folder": "${UMBREL_ROOT}/data/storage/downloads",
     "categories": ["sonarr", "radarr"]
   },
-  "use_auth": false,
+  "use_auth": true,
   "log_level": "info",
   "port": "8282"
 }
