@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: denny-dab
+name: Zoraxy Proxy Server
+tagline: Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the unified deployment of the following projects/tools.
+
+icon: https://github.com/I-am-PUID-0/DMB/assets/36779668/d0cbc785-2e09-41da-b226-924fdfcc1f21
+category: files & productivity
+version: "6.15.2"
+port: 3005
+description: >-
+  Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the unified deployment of the following projects/tools.
+
+developer: I am Puid0
+website: https://github.com/I-am-PUID-0/DMB
+submitter: awesomedad
+submission: https://github.com/I-am-PUID-0/DMB
+repo: https://github.com/I-am-PUID-0/DMB
+support: https://github.com/I-am-PUID-0/DMB/issues
+gallery:
+ 
+releaseNotes: >-
+ 
+dependencies:
+path: ""
+defaultUsername: ""
+defaultPassword: ""
