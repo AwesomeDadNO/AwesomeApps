@@ -21,7 +21,4 @@ services:
       - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
     container_name: emby_server_1
 
-    depends_on:                                             ## Used to delay the startup of plex to ensure the rclone mount is available.
-      DMB:                                                  ## The name of the container running rclone
-        condition: service_healthy
-        restart: true                                       ## Will automatically restart the plex container if the DMB container restarts
+  
