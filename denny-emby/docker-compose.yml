@@ -18,4 +18,7 @@ services:
       - ${APP_DATA_DIR}/data/config:/config:rw
       - ${UMBREL_ROOT}/home/Downloads:/downloads
       - ${UMBREL_ROOT}/home/Videos:/mnt/emby/symlinks
+      - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
     container_name: emby_server_1
+
+  
