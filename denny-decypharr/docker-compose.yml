@@ -7,7 +7,7 @@ services:
       APP_PORT: 8282
 
   web:
-    image: ghcr.io/sirrobot01/decypharr:v1.1.3@sha256:c2cd8d52238832297aea66f08a8e36b084ae7592e5556e6f652d551b8550a2dc
+    image: ghcr.io/sirrobot01/decypharr:beta
     user: "1000:1000"
     volumes:
       - ${APP_DATA_DIR}/data/mnt/:/mnt
