@@ -23,9 +23,9 @@ services:
       - ${UMBREL_ROOT}/home/Videos:/mnt/emby/symlinks
       - ${UMBREL_ROOT}/home/Videos:/mnt/debrid/riven/__all__
     environment:
-      - TZ=
-      - PUID=
-      - PGID=
+      TZ: Europe/Berlin
+      UID: 1000
+      GID: 1000
     ports:
       - '3005:3005'
       - '3000:3000'

@@ -5,7 +5,7 @@ tagline: Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the u
 
 icon: https://github.com/I-am-PUID-0/DMB/assets/36779668/d0cbc785-2e09-41da-b226-924fdfcc1f21
 category: files & productivity
-version: "6.15.6"
+version: "6.15.7 beta"
 port: 3005
 description: >-
   🧩 Decypharr is an open source application written in Go that acts as a qBittorrent compatible API while integrating support for popular Debrid services such as Real Debrid, All Debrid, Torbox and Debrid Link. It is designed for seamless integration with automation tools like Sonarr, Radarr and Lidarr which can interact with it as if it were a standard qBittorrent client. This allows users to automate the process of downloading torrents through their premium Debrid accounts without needing to run a traditional torrent client or maintain their own seedbox.
