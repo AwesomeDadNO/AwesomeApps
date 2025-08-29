@@ -1,0 +1,20 @@
+services:
+  cinesync:
+    image: sureshfizzy/cinesync:latest
+    container_name: cinesync
+    restart: unless-stopped
+    ports:
+      - "5173:5173"  # Web Interface
+      - "8082:8082"  # API & WebDAV
+    environment:
+      - PUID=1000    # Set to your user ID
+      - PGID=1000    # Set to your group ID
+      - TZ=UTC       # Set your timezone
+    volumes:
+      # Configuration and database
+      - ./.env:/app/.env
+      - ./db:/app/db
+      - /home:/home
+      - /mnt:/mnt
+      - ${UMBREL_ROOT}/home/Videos:/videoes
+      - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
