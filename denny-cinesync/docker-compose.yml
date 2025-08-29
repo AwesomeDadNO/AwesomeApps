@@ -12,6 +12,16 @@ services:
       - TZ=UTC       # Set your timezone
       - SOURCE_DIR=/mnt/debrid/riven/__all__
       - DESTINATION_DIR=/videoes
+      - CINESYNC_LAYOUT=true
+      - ANIME_SEPARATION=true
+      - KIDS_SEPARATION=true
+      - CUSTOM_KIDS_MOVIE_FOLDER=Kids Movies
+      - CUSTOM_KIDS_SHOW_FOLDER=Kids TV
+      - TMDB_API_KEY=388d81cb7c76ecc839c37ff99ff57bfd
+      - ANIME_SCAN=true
+      - RENAME_ENABLED=true
+      
+      
     volumes:
       # Configuration and database
       - ./.env:/app/.env
