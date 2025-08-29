@@ -1,53 +1,29 @@
 manifestVersion: 1
 id: denny-cinesync
-name: Cinesync
+name: Cinesync 
 tagline: CineSync - Organize Your Media Library Easily
+
 icon: https://private-user-images.githubusercontent.com/90914346/395263506-1d61e450-b5df-4a7d-960c-a4d77770c933.png
 category: files & productivity
-version: "3.0"
+version: "3.1.4"
 port: 5173
 description: >-
-  CineSync is a comprehensive media library management system designed to efficiently organize libraries for Movies & TV shows, eliminating the need for Sonarr/Radarr. With its modern web interface, real-time monitoring, and advanced automation features, CineSync streamlines the organization of your library while providing full control over your data locally. While highly optimized for debrid platforms, CineSync is also versatile and works effectively with non-debrid platforms.
-
-CineSync Web Interface
-CineSync features a modern web interface for complete library management with professional-grade tools and real-time monitoring.
-
-How CineSync Works ?
-CineSync creates symbolic links from source directories to destination directories, organizing them according to your preferences and metadata from TMDb/IMDb/TVDB. This approach allows you to maintain a well-structured library without physically moving or duplicating files, preserving disk space while enabling advanced organization features.
-
-What's New in CineSync
-🌐 Modern Web Interface - Complete web-based dashboard with file browser, settings management, and real-time monitoring
-🤖 Auto-Processing - Intelligent automation that processes media files as they're discovered
-📊 Advanced Analytics - Comprehensive dashboard with media statistics, recent activity, and system monitoring
-🎯 Smart Content Separation - Automatic categorization for Kids content, 4K media, and Anime with customizable rules
-🔄 Real-Time Updates - Live dashboard updates and instant media server integration (Plex/Jellyfin/Emby)
-🗃️ Database Management - Built-in database with export capabilities and advanced search functionality
-Web Interface Features
-📊 Interactive Dashboard: Real-time statistics, recent media tracking, and system monitoring
-📁 Advanced File Browser: Navigate, manage, and organize your media library with drag-and-drop support
-⚙️ Settings Management: Configure all CineSync options through an intuitive web interface
-🔍 Smart Search: Advanced search and filtering capabilities with alphabet indexing
-📈 Analytics & Reporting: Detailed insights into your media collection and processing activities
-🔄 Real-Time Updates: Live notifications and automatic refresh of library changes
-🎯 Auto-Processing Controls: Enable/disable automatic processing with toggle controls
-🗃️ Database Management: Export, search, and manage your media database
-🔐 Secure Authentication: JWT-based authentication with configurable access controls
-With CineSync's integrated web interface, your media library is instantly manageable across multiple devices with professional-grade tools and real-time automation.
-
-For detailed configuration and usage, visit the Web Interface Guide.
-
-developer: sureshfizzy Suresh S
-website: https://github.com/sureshfizzy/CineSync
-submitter: awesomedad
-submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/actualbudget/actual-server
-support: https://github.com/actualbudget/actual-server/issues
+ CineSync is a comprehensive media library management system designed to efficiently organize libraries for Movies & TV shows, eliminating the need for Sonarr/Radarr. With its modern web interface, real-time monitoring, and advanced automation features, CineSync streamlines the organization of your library while providing full control over your data locally. While highly optimized for debrid platforms, CineSync is also versatile and works effectively with non-debrid platforms.
+developer: Mukhtar Akere
+website: https://github.com/sirrobot01/decypharr
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/sirrobot01/decypharr
+support: https://github.com/sirrobot01/decypharr/issues
 gallery:
-  - https://github.com/sureshfizzy/CineSync/raw/main/Screenshots/Dashbaord.png
-  - https://github.com/sureshfizzy/CineSync/raw/main/Screenshots/FileBrowser.png
-
+  - https://i.imgur.com/cmAKU6X.png
+  - https://i.imgur.com/reTy844.png
+  - https://i.imgur.com/RkORTXC.png
+  - https://i.imgur.com/Wrhd8TR.png
+  - https://i.imgur.com/DQUfFG8.png
 releaseNotes: >-
+ New docker compose with .env
 dependencies:
 path: ""
-defaultUsername: "none"
-defaultPassword: "password"
+defaultUsername: ""
+defaultPassword: ""
