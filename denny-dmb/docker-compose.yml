@@ -20,8 +20,8 @@ services:
       - /home/username/docker/DMB/decypharr:/decypharr
       - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
       - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__
-      - ${UMBREL_ROOT}/home/Videos:/mnt/emby/symlinks
-      - ${UMBREL_ROOT}/home/Videos:/mnt/debrid/riven/__all__
+      - ${UMBREL_ROOT}/home/Videos/symlinks:/mnt/emby/symlinks
+      - ${UMBREL_ROOT}/home/Videos/all:/mnt/emby/__all__
     environment:
       TZ: Europe/Berlin
       UID: 1000
