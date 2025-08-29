@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     ports:
       - "5173:5173"  # Web Interface
-      - "8082:8082"  # API & WebDAV
+      - "3456:3456"  # API & WebDAV
     environment:
       - PUID=1000    # Set to your user ID
       - PGID=1000    # Set to your group ID
