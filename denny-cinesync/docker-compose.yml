@@ -11,7 +11,7 @@ services:
       - PGID=1000    # Set to your group ID
       - TZ=UTC       # Set your timezone
       - SOURCE_DIR=/mnt/debrid/riven/__all__
-      - DESTINATION_DIR=/mnt/emby/symlinks
+      - DESTINATION_DIR=/videoes
     volumes:
       # Configuration and database
       - ./.env:/app/.env
