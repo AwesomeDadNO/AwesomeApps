@@ -1,53 +1,41 @@
 manifestVersion: 1
 id: denny-cinesync
-name: Cinesync
-tagline: CineSync - Organize Your Media Library Easily
-icon: https://private-user-images.githubusercontent.com/90914346/395263506-1d61e450-b5df-4a7d-960c-a4d77770c933.png
+name: DMB 
+tagline: Debrid Media Bridge (DMB) is an All-In-One (AIO) docker image for the unified deployment of the following projects/tools.
+
+icon: https://github.com/I-am-PUID-0/DMB/assets/36779668/d0cbc785-2e09-41da-b226-924fdfcc1f21
 category: files & productivity
 version: "3.0"
 port: 5173
 description: >-
-  CineSync is a comprehensive media library management system designed to efficiently organize libraries for Movies & TV shows, eliminating the need for Sonarr/Radarr. With its modern web interface, real-time monitoring, and advanced automation features, CineSync streamlines the organization of your library while providing full control over your data locally. While highly optimized for debrid platforms, CineSync is also versatile and works effectively with non-debrid platforms.
+  🧩 Decypharr is an open source application written in Go that acts as a qBittorrent compatible API while integrating support for popular Debrid services such as Real Debrid, All Debrid, Torbox and Debrid Link. It is designed for seamless integration with automation tools like Sonarr, Radarr and Lidarr which can interact with it as if it were a standard qBittorrent client. This allows users to automate the process of downloading torrents through their premium Debrid accounts without needing to run a traditional torrent client or maintain their own seedbox.
 
-CineSync Web Interface
-CineSync features a modern web interface for complete library management with professional-grade tools and real-time monitoring.
 
-How CineSync Works ?
-CineSync creates symbolic links from source directories to destination directories, organizing them according to your preferences and metadata from TMDb/IMDb/TVDB. This approach allows you to maintain a well-structured library without physically moving or duplicating files, preserving disk space while enabling advanced organization features.
+  The core functionality of Decypharr centers on intercepting torrent and magnet links from the connected automation tools and passing them to the configured Debrid services. These services handle the torrent download on their own infrastructure and provide direct download links which Decypharr then manages locally. The software includes a simple and functional web user interface that gives users the ability to monitor and manage the status of their downloads.
 
-What's New in CineSync
-🌐 Modern Web Interface - Complete web-based dashboard with file browser, settings management, and real-time monitoring
-🤖 Auto-Processing - Intelligent automation that processes media files as they're discovered
-📊 Advanced Analytics - Comprehensive dashboard with media statistics, recent activity, and system monitoring
-🎯 Smart Content Separation - Automatic categorization for Kids content, 4K media, and Anime with customizable rules
-🔄 Real-Time Updates - Live dashboard updates and instant media server integration (Plex/Jellyfin/Emby)
-🗃️ Database Management - Built-in database with export capabilities and advanced search functionality
-Web Interface Features
-📊 Interactive Dashboard: Real-time statistics, recent media tracking, and system monitoring
-📁 Advanced File Browser: Navigate, manage, and organize your media library with drag-and-drop support
-⚙️ Settings Management: Configure all CineSync options through an intuitive web interface
-🔍 Smart Search: Advanced search and filtering capabilities with alphabet indexing
-📈 Analytics & Reporting: Detailed insights into your media collection and processing activities
-🔄 Real-Time Updates: Live notifications and automatic refresh of library changes
-🎯 Auto-Processing Controls: Enable/disable automatic processing with toggle controls
-🗃️ Database Management: Export, search, and manage your media database
-🔐 Secure Authentication: JWT-based authentication with configurable access controls
-With CineSync's integrated web interface, your media library is instantly manageable across multiple devices with professional-grade tools and real-time automation.
 
-For detailed configuration and usage, visit the Web Interface Guide.
+  In addition to its API compatibility and Debrid integration Decypharr offers a built in WebDAV server for accessing downloaded files as well as a symlink manager that ensures files are correctly linked for media library updates. It also includes repair workers that check for missing or broken symlinks and automatically correct them providing a reliable experience especially when dealing with large automated libraries. Decypharr is actively maintained and offers a modern alternative to older tools like Zurg by combining speed simplicity and advanced features such as WebDAV and symlink repair in a single solution.
 
-developer: sureshfizzy Suresh S
-website: https://github.com/sureshfizzy/CineSync
-submitter: awesomedad
-submission: https://github.com/dennysubke/dennys-umbrel-app-store
-repo: https://github.com/actualbudget/actual-server
-support: https://github.com/actualbudget/actual-server/issues
+
+  ⚙️ For configuration, you should visit the official documentation at:
+  
+  
+  https://sirrobot01.github.io/decypharr/.
+developer: Mukhtar Akere
+website: https://github.com/sirrobot01/decypharr
+submitter: dennysubke
+submission: https://github.com/getumbrel/umbrel-apps/pull/
+repo: https://github.com/sirrobot01/decypharr
+support: https://github.com/sirrobot01/decypharr/issues
 gallery:
-  - https://github.com/sureshfizzy/CineSync/raw/main/Screenshots/Dashbaord.png
-  - https://github.com/sureshfizzy/CineSync/raw/main/Screenshots/FileBrowser.png
-
+  - https://i.imgur.com/cmAKU6X.png
+  - https://i.imgur.com/reTy844.png
+  - https://i.imgur.com/RkORTXC.png
+  - https://i.imgur.com/Wrhd8TR.png
+  - https://i.imgur.com/DQUfFG8.png
 releaseNotes: >-
+  Version 1.0.2 introduces support for per-file deletion and per-file repair instead of per-torrent repair. It also includes fixes for LoadLocation issues and minor TorBox-related bugs.
 dependencies:
 path: ""
-defaultUsername: "none"
-defaultPassword: "password"
+defaultUsername: ""
+defaultPassword: ""
