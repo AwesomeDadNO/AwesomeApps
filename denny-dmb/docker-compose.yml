@@ -20,8 +20,6 @@ services:
       - /home/username/docker/DMB/decypharr:/decypharr
       - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
       - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__
-      - ${UMBREL_ROOT}/home/Videos/symlinks:/mnt/emby/symlinks
-      - ${UMBREL_ROOT}/home/Videos/all:/mnt/emby/__all__
     environment:
       TZ: Europe/Berlin
       UID: 0
@@ -34,8 +32,5 @@ services:
       - '8282:8282'
     devices:
       - /dev/fuse:/dev/fuse:rwm
-    cap_add:
-      - SYS_ADMIN
-    security_opt:
-      - apparmor:unconfined
-      - no-new-privileges
+
+

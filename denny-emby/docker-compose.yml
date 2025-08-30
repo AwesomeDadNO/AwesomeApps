@@ -17,6 +17,7 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data/config:/config:rw
       - ${UMBREL_ROOT}/home/Downloads:/downloads
-      - ${UMBREL_ROOT}/home/Videoes:/videoes
-      - /home/username/docker/DMB/mnt/debrid:/mnt/media
+      - /home/username/docker/DMB/mnt/debrid/riven_symlinks:/mnt/symlinks
+      - /home/username/docker/DMB/mnt/debrid/riven/movies:/mnt/movies
+      - /home/username/docker/DMB/mnt/debrid/riven/shows:/mnt/shows
     container_name: emby_server_1
