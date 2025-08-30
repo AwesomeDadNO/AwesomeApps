@@ -18,8 +18,9 @@ services:
       - /home/username/docker/DMB/cli_debrid:/cli_debrid/data
       - /home/username/docker/DMB/phalanx_db:/phalanx_db/data
       - /home/username/docker/DMB/decypharr:/decypharr
-      - /home/username/docker/DMB/mnt/debrid:/mnt/debrid
-      - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__
+      - /home/username/docker/DMB/mnt/debrid:/mnt/debrid:rshared
+      - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__:rshared
+
     environment:
       TZ: Europe/Berlin
       UID: 
