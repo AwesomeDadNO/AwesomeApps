@@ -25,8 +25,8 @@ services:
 
     environment:
       TZ: Europe/Berlin
-      UID: 
-      GID: 
+      - PUID=
+      - PGID=
     ports:
       - '3005:3005'
       - '3000:3000'
@@ -35,5 +35,11 @@ services:
       - '8282:8282'
     devices:
       - /dev/fuse:/dev/fuse:rwm
+
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+      - no-new-privileges
 
 
