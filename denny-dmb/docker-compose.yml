@@ -22,8 +22,8 @@ services:
       - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__
     environment:
       TZ: Europe/Berlin
-      UID: 0
-      GID: 0
+      UID: 
+      GID: 
     ports:
       - '3005:3005'
       - '3000:3000'
