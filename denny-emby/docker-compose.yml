@@ -11,11 +11,12 @@ services:
       linuxserver/emby:4.8.11@sha256:3e9b2363fe16c3858fe8c7e32e949d819f85cb3be6705ceb37977e9c7b618e82
     environment:
       TZ: Europe/Berlin
-      UID: 1000
-      GID: 1000
+      UID: 0
+      GID: 0
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config:rw
       - ${UMBREL_ROOT}/home/Downloads:/downloads
+      - ${UMBREL_ROOT}/home/Videoes:/videoes
       - /home/username/docker/DMB/mnt/debrid:/mnt/media
     container_name: emby_server_1

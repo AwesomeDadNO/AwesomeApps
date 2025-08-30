@@ -24,8 +24,8 @@ services:
       - ${UMBREL_ROOT}/home/Videos/all:/mnt/emby/__all__
     environment:
       TZ: Europe/Berlin
-      UID: 1000
-      GID: 1000
+      UID: 0
+      GID: 0
     ports:
       - '3005:3005'
       - '3000:3000'
