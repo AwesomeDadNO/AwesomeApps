@@ -19,7 +19,9 @@ services:
       - /home/username/docker/DMB/phalanx_db:/phalanx_db/data
       - /home/username/docker/DMB/decypharr:/decypharr
       - /home/username/docker/DMB/mnt/debrid:/mnt/debrid:rshared
-      - /home/username/docker/DMB/mnt/debrid/riven/__all__:/mnt/debrid/riven/__all__:rshared
+      - ${UMBREL_ROOT}/home/Videos:/videos/emby/symlinks
+      - ${UMBREL_ROOT}/home/Videos/all:/videos/emby/__all__
+     
 
     environment:
       TZ: Europe/Berlin
