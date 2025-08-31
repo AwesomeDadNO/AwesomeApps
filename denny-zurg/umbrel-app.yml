@@ -4,7 +4,7 @@ name: Zurg
 tagline: A combined docker image for the unified deployment of itsToggle's, yowmamasita's, and ncw's projects -- plex_debrid, zurg, and rclone
 icon: https://i.imgur.com/KllfrRz.png
 category: files & productivity
-version: "2.9.2 beta"
+version: "2.9.2 beta 1"
 port: 8800
 description: >-
   Mount Rclone with Zurg
