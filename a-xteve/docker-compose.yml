@@ -1,15 +1,19 @@
-version: "3.7"
+version: '3.8'
 
 services:
-  xteve_lazystream:
-    image: taylorbourne/xteve_lazystream
-    restart: unless-stopped
-    ports:
-      - "34400:34400"
+  xteve:
+    image: dnsforge/xteve:latest # Or another suitable image like alturismo/xteve
+    container_name: xteve
+    network_mode: host # Recommended for easier network access and HDHomeRun emulation
+    # Or use bridge mode with port mapping:
+    # ports:
+    #   - "34400:34400" # xTeVe web UI
+    #   - "5004:5004" # HDHomeRun emulation port (if needed)
+    environment:
+      - PUID=1000 # User ID (adjust as needed)
+      - PGID=1000 # Group ID (adjust as needed)
+      - TZ=Europe/Berlin # Set your timezone
     volumes:
-      - /var/data/xteve/.xteve:/xteve:rw
-      - /var/data/xteve/config/:/config:rw
-      - /var/data/xteve/guide2go/:/guide2go:rw
-      - /var/data/xteve/playlists/:/playlists:rw
-      - /tmp/xteve/:/tmp/xteve:rw
-    env_file: .env
+      - /path/to/your/xteve/config:/xteve/config # Persistent storage for xTeVe configuration
+      - /path/to/your/xteve/data:/xteve/data # Persistent storage for data (e.g., EPG, channel logos)
+    restart: unless-stopped
