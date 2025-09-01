@@ -1,0 +1,56 @@
+name: spotify-downloader
+
+services:
+  spotify-downloader:
+    image: pjmeca/spotify-downloader:latest
+    container_name: spotify-downloader
+    restart: unless-stopped
+    volumes:
+      - ${UMBREL_ROOT}/home/Music:/misic
+      - ${APP_DATA_DIR}/data/tracking.yaml:/app/tracking.yaml:ro # (Required) Change this
+      - ${APP_DATA_DIR}/data/cache:/app/cache # (Recommended) Store the SQLite cache somewhere
+      - /path/to/logs:/app/logs # (Optional)
+    environment:
+      CRON_SCHEDULE: "0 0 * * *" # (Required) Customize your cron if needed
+      CLIENT__ID: "a51715db21f14a64a38293da0ade398f" # (Required) Change this
+      CLIENT__SECRET: "3a62bb82cff74c41b7f531e911542f4c" # (Required) Change this
+      TZ: Europe/Madrid # (Recommended) Your timezone
+      FORMAT: "opus" # (Optional) Music format. Must be compatible with spotDL. Defaults to "opus".
+      OPTIONS: "" # (Optional) Additional spotDL options. Don't add here your Spotify credentials.
+
+
+services:
+  DUMB:
+    container_name: DUMB2
+    image: iampuid0/dumb:latest                                       ## Optionally, specify a specific version of DUMB w/ image: iampuid0/dumb:2.0.0
+    stop_grace_period: 30s                                            ## Adjust as need to allow for graceful shutdown of the container
+    shm_size: 128mb                                                   ## Increased for PostgreSQL
+    stdin_open: true                                                  ## docker run -i
+    tty: true                                                         ## docker run -t
+    volumes:
+      - /home/username/docker/DUMB/config:/config                     ## Location of configuration files.
+      - /home/username/docker/DUMB/log:/log                           ## Location for logs
+      - /home/username/docker/DUMB/data:/data                         ## Location for all service data
+      - /home/username/docker/DUMB/mnt/debrid:/mnt/debrid             ## Location for all symlinks and rclone mounts - change to /mnt/debrid:rshared if using decypharr 
+      - ${UMBREL_ROOT}/home/Videos/rclone:/mnt/emby/rclone
+      - ${UMBREL_ROOT}/home/Videos/symlinks:/mnt/emby/symlinks
+    environment:
+      - TZ=
+      - PUID=
+      - PGID=
+    # network_mode: container:gluetun                                ## Example to attach to gluetun vpn container if realdebrid blocks IP address
+    ports:
+      - "3005:3005"                                                  ## DUMB Frontend
+      - "3000:3000"                                                  ## Riven Frontend
+      - "5050:5050"                                                  ## pgAdmin 4 Frontend
+      - "5000:5000"                                                  ## CLI Debrid Frontend      
+      - "8282:8282"                                                  ## Decypharr Frontend         
+      - "32400:32400"                                                ## Plex Media Server      
+    devices:
+      - /dev/fuse:/dev/fuse:rwm
+      - /dev/dri:/dev/dri       
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - apparmor:unconfined
+      - no-new-privileges
