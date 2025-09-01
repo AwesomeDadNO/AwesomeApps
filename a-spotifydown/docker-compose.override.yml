@@ -1,4 +1,0 @@
-services:
-  spotify-downloader:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
