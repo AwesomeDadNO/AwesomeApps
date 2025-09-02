@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: emby_server_1
+      APP_PORT: 8096
+      PROXY_AUTH_ADD: 'false'
+    container_name: emby_app_proxy_1
+  server:
+    image: >-
+      linuxserver/emby:4.9.1-beta@sha256:123ba956c37b1eeb384c995d189adb465f210219075549bf8ca27f2f9f990a1a
+    environment:
+      TZ: Europe/Berlin
+      UID: 0
+      GID: 0
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config:rw
+      - ./mnt/zurg:/zurg
+      
+    container_name: emby_server_1

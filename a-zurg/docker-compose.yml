@@ -3,7 +3,7 @@ version: '3.8'
 services:
   zurg:
     image: ghcr.io/debridmediamanager/zurg-testing:latest    
-    container_name: zurg
+    container_name: Zurg-test
     restart: unless-stopped
     ports:
       - 9999:9999
@@ -14,7 +14,7 @@ services:
 
   rclone:
     image: rclone/rclone:latest
-    container_name: rclone
+    container_name: rclone-test
     restart: unless-stopped
     environment:
       TZ: Europe/Berlin
