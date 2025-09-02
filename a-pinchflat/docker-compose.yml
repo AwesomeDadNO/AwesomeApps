@@ -1,18 +1,14 @@
-version: '3.7'
+version: '3'
 services:
-  app_proxy:
+  pinchflat:
+    image: ghcr.io/kieraneglin/pinchflat:latest
     environment:
-      APP_HOST: denny-pinchflat_web_1
-      APP_PORT: 8945
-    container_name: denny-pinchflat_app_proxy_1
-  web:
-    image: >-
-      ghcr.io/kieraneglin/pinchflat:latest
-    restart: on-failure
+      # Set the timezone to your local timezone
+      - TZ=America/New_York
+    ports:
+      - '8945:8945'
     volumes:
-      - ${APP_DATA_DIR}/data/config:/config:rw
-      - ${APP_DATA_DIR}/data/downloads:/downloads:rw
-      - ${UMBREL_ROOT}/home/Music/mp3:mp3:rw
-      - ${UMBREL_ROOT}/home/Music/video:video:rw
-      - ${UMBREL_ROOT}/home/Videos/YT:YT:rw
-    container_name: denny-pinchflat_web_1
+      - /host/path/to/config:/config
+      - ${UMBREL_ROOT}/home/Videos/yt:/mnt/yt
+      - ${UMBREL_ROOT}/home/Music/mp3:/mnt/mp3
+      - ${UMBREL_ROOT}/home/Music/videos:/mnt/videos
