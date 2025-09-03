@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: brcly-playit_server_1
-      APP_PORT: 8008
+      APP_PORT: 8585
       PROXY_AUTH_ADD: "false"
   
   server:
