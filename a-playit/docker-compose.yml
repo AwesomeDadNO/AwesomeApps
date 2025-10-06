@@ -12,3 +12,9 @@ services:
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/config:/config
+
+
+16f3cf3db801b3acef12aa934007c997a0cb913e96faf758028af7d16412fffe
+
+docker run --rm --net=host -e SECRET_KEY=16f3cf3db801b3acef12aa934007c997a0cb913e96faf758028af7d16412fffe playitcloud/playit:0.15.19
+
